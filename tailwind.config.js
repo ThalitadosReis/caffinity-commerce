@@ -8,7 +8,6 @@ export default {
       white: colors.white,
       gray: colors.slate,
       amber: colors.amber,
-      transparent: "transparent",
       obsidian: "#0B1215",
       offwhite: "#FBFBFB",
     },
