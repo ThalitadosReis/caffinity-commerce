@@ -7,13 +7,11 @@ export default {
       black: colors.black,
       white: colors.white,
       gray: colors.slate,
-      amber: colors.amber,
       obsidian: "#0B1215",
       offwhite: "#FBFBFB",
     },
     fontFamily: {
       primary: "Hind Madurai",
-      montserrat: "Montserrat",
     },
     container: {
       padding: {
