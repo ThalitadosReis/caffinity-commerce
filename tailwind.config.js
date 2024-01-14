@@ -7,11 +7,13 @@ export default {
       black: colors.black,
       white: colors.white,
       gray: colors.slate,
+      cyan: colors.cyan,
       obsidian: "#0B1215",
       offwhite: "#FBFBFB",
     },
     fontFamily: {
       primary: "acumin-pro",
+      heading: "Bebas Neue",
     },
     container: {
       padding: {
