@@ -6,11 +6,10 @@ export default function Navbar() {
           <div className="flex items-center justify-between gap-x-4">
             <a className="flex cursor-pointer items-center gap-x-1">
               <img
-                className="object-cover w-10"
-                src="/src/assets/coffee-bag.svg"
+                className="object-cover w-20"
+                src="/src/assets/logo.png"
                 alt="logo"
               />
-              <span className="text-lg text-gray-700">Caffinity</span>
             </a>
             <ul className="flex items-center gap-x-3">
               <li>
@@ -101,7 +100,7 @@ export default function Navbar() {
             </form>
             <ul className="flex items-center gap-x-6">
               <li className="hidden md:block">
-                <a className="cursor-pointer text-sm font-medium text-gray-900 hover:text-gray-900/70">
+                <a className="cursor-pointer text-sm font-normal text-gray-900 hover:text-gray-900/70">
                   All Products
                 </a>
               </li>

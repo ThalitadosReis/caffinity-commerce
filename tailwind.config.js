@@ -11,7 +11,7 @@ export default {
       offwhite: "#FBFBFB",
     },
     fontFamily: {
-      primary: "Hind Madurai",
+      primary: "acumin-pro",
     },
     container: {
       padding: {
