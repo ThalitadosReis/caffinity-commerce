@@ -5,11 +5,29 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-  html {
-    font-family: "acumin-pro", sans-serif;
+.custom-button {
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 16px 48px; 
+  color: #fff; 
+  background-color: #603E25; 
+  border-radius: 8px; 
+  transition: background-color 0.3s ease; 
+
+  &:hover {
+    background-color: #C09E79; 
   }
+}
+
+
+@layer base {
   body {
-    @apply font-primary text-lg leading-8 ;
+    @apply font-primary text-lg bg-ivory;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply text-eerie; 
+  }
+  p {
+    @apply text-black;
   }
 }
