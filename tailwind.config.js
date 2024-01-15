@@ -8,8 +8,14 @@ export default {
       white: colors.white,
       gray: colors.slate,
       cyan: colors.cyan,
-      obsidian: "#0B1215",
-      offwhite: "#FBFBFB",
+
+      // color pallet
+      ivory: "#ffff0",
+      timberwolf: "#CFC5C0",
+      silver: "#C4BAB1",
+      eerie: "#1D1D1B",
+      dogwood: "#D1B1A2",
+      lion: "#B79A79",
     },
     fontFamily: {
       primary: "acumin-pro",
