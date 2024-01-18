@@ -10,17 +10,17 @@ export default function Navbar() {
         <div className="flex items-center justify-between gap-x-4">
           <ul className="hidden md:flex items-center gap-x-6">
             <li>
-              <a className=" text-sm font-normal text-gray-900 hover:text-gray-900/70">
+              <a className="text-sm font-normal text-gray-900 hover:text-gray-900/70">
                 Shop
               </a>
             </li>
             <li>
-              <a className=" text-sm font-medium text-gray-900 hover:text-gray-900/70">
+              <a className="text-sm font-medium text-gray-900 hover:text-gray-900/70">
                 About
               </a>
             </li>
             <li>
-              <a className=" text-sm font-medium text-gray-900 hover:text-gray-900/70">
+              <a className="text-sm font-medium text-gray-900 hover:text-gray-900/70">
                 Collections
               </a>
             </li>
@@ -36,17 +36,17 @@ export default function Navbar() {
 
           <ul className="hidden md:flex items-center gap-x-6">
             <li>
-              <a className=" text-sm font-normal text-gray-900 hover:text-gray-900/70">
+              <a className="text-sm font-normal text-gray-900 hover:text-gray-900/70">
                 My Account
               </a>
             </li>
             <li>
-              <a className=" text-sm font-medium text-gray-900 hover:text-gray-900/70">
+              <a className="text-sm font-medium text-gray-900 hover:text-gray-900/70">
                 Wishlist
               </a>
             </li>
             <li>
-              <a className=" text-sm font-medium text-gray-900 hover:text-gray-900/70">
+              <a className="text-sm font-medium text-gray-900 hover:text-gray-900/70">
                 Cart (0)
               </a>
             </li>
@@ -57,7 +57,7 @@ export default function Navbar() {
             <li className="flex items-center gap-x-4">
               <button
                 onClick={toggleDropdown}
-                className="block  p-2 text-sm font-medium hover:border-gray-900/70 hover:text-gray-900/70"
+                className="block p-2 text-sm font-medium hover:border-gray-900/70 hover:text-gray-900/70"
               >
                 <svg
                   aria-hidden="true"

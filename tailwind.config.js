@@ -7,7 +7,6 @@ export default {
       black: colors.black,
       white: colors.white,
       gray: colors.slate,
-      cyan: colors.cyan,
 
       // color pallet
       ivory: "#ffff0",
