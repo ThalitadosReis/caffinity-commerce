@@ -6,7 +6,7 @@ export default function Navbar() {
 
   return (
     <nav data-x-data="{ isOpen: false }" aria-label="Website Navbar">
-      <div className="container mx-auto max-w-screen-xl pt-3">
+      <div className="container mx-auto">
         <div className="flex items-center justify-between gap-x-4">
           <ul className="hidden md:flex items-center gap-x-6">
             <li>

@@ -6,19 +6,13 @@ export default {
     colors: {
       black: colors.black,
       white: colors.white,
-      gray: colors.slate,
+      stone: colors.stone,
 
-      // color pallet
-      ivory: "#ffff0",
-      timberwolf: "#CFC5C0",
-      silver: "#C4BAB1",
-      eerie: "#1D1D1B",
-      dogwood: "#D1B1A2",
-      lion: "#B79A79",
+      coffee: "#3c312b",
     },
     fontFamily: {
-      primary: "acumin-pro",
-      heading: "Bebas Neue",
+      primary: "Bebas Neue",
+      secondary: "acumin-pro",
     },
     container: {
       padding: {
