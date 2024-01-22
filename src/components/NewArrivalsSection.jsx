@@ -1,6 +1,22 @@
+import { useState } from "react";
 import img1 from "../assets/img1.png";
 
-export default function Highlight() {
+export default function Popular() {
+  const [likedProducts, setLikedProducts] = useState([]);
+
+  const handleLikeClick = (productId) => {
+    setLikedProducts((prevLikedProducts) => {
+      if (prevLikedProducts.includes(productId)) {
+        return prevLikedProducts.filter((id) => id !== productId);
+      } else {
+        return [...prevLikedProducts, productId];
+      }
+    });
+  };
+
+  const isProductLiked = (productId) => likedProducts.includes(productId);
+
+  // products list
   const products = [
     {
       id: 1,
@@ -29,11 +45,14 @@ export default function Highlight() {
   ];
 
   return (
-    <div className="bg-white rounded-3xl p-9 space-y-9">
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-5 items-center">
-        <h1 className="uppercase font-primary text-6xl text-balance">Deals</h1>
+    <section className="bg-white rounded-3xl p-9 space-y-9">
+      <div className="grid grid-cols-1 md:grid-cols-3 items-center gap-3">
+        <h1 className="uppercase font-primary text-5xl text-balance">
+          New Arrivals
+        </h1>
         <p className="text-sm text-black">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua.
         </p>
         <div className="justify-start md:justify-self-end">
           <button className="flex gap-2 custom-button text-bold">
@@ -57,19 +76,22 @@ export default function Highlight() {
         {products.map((product) => (
           <div key={product.id} className="flex flex-col">
             <div className="relative flex flex-col space-y-2">
-              <div className="bg-stone-200 p-6 rounded-3xl relative">
+              <div className="bg-stone-200 p-4 rounded-3xl relative">
                 <img
                   className="w-full h-full object-cover rounded-2xl"
                   src={product.imgSrc}
                   alt={product.productName}
                 />
-                <button className="absolute top-2 right-2 p-2">
+                <button
+                  className="absolute top-2 right-2 p-2"
+                  onClick={() => handleLikeClick(product.id)}
+                >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
+                    fill={isProductLiked(product.id) ? "red" : "none"}
                     viewBox="0 0 24 24"
                     strokeWidth={1.5}
-                    stroke="currentColor"
+                    stroke={isProductLiked(product.id) ? "red" : "currentColor"}
                     className="w-6 h-6"
                   >
                     <path
@@ -106,6 +128,6 @@ export default function Highlight() {
           </div>
         ))}
       </div>
-    </div>
+    </section>
   );
 }

@@ -1,7 +1,7 @@
 export default function Banner() {
   return (
-    <div className="lg:h-[500px] flex flex-col lg:flex-row items-center space-x-5 text-white">
-      <div className="lg:w-5/12 h-full bg-stone-800 rounded-3xl flex flex-col space-y-5 lg:justify-between p-5">
+    <section className="lg:h-[500px] flex flex-col lg:flex-row items-center space-x-5 text-white">
+      <div className="lg:w-5/12 h-full bg-stone-800 rounded-3xl flex flex-col space-y-5 lg:justify-between p-9">
         <div className="lg:my-auto space-y-5">
           <h1 className="uppercase font-primary text-4xl md:text-5xl text-balance">
             The best coffee scene you have ever seen.
@@ -41,7 +41,7 @@ export default function Banner() {
           alt="Coffee Mockup"
         />
 
-        <div className="absolute top-3 right-3 flex items-center justify-center">
+        <div className="absolute top-5 right-5 flex items-center justify-center">
           <svg viewBox="0 0 100 100" width="70" className="rotate-animation">
             <defs>
               <path
@@ -49,7 +49,7 @@ export default function Banner() {
                 d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0"
               />
             </defs>
-            <text fontSize="14" className="uppercase">
+            <text className="uppercase text-sm">
               <textPath xlinkHref="#circle">
                 <animateTransform
                   attributeName="transform"
@@ -80,6 +80,6 @@ export default function Banner() {
           </button>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

@@ -1,6 +1,6 @@
 export default function About() {
   return (
-    <div className="h-[400px] flex flex-col md:flex-row items-center space-x-5">
+    <section className="h-[400px] flex flex-col md:flex-row items-center space-x-5">
       <div className="md:w-7/12 h-full flex flex-col space-y-5 md:justify-between p-5">
         <div className="md:my-auto">
           <h1 className="uppercase font-primary text-6xl text-balance text-black">
@@ -26,6 +26,6 @@ export default function About() {
         />
         <div className="bg-yellow w-52 rounded-3xl"></div>
       </div>
-    </div>
+    </section>
   );
 }
