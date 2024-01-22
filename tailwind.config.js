@@ -9,6 +9,7 @@ export default {
       stone: colors.stone,
 
       coffee: "#3c312b",
+      yellow: "#f7b22c",
     },
     fontFamily: {
       primary: "Bebas Neue",
