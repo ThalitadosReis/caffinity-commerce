@@ -7,6 +7,7 @@ export default {
       black: colors.black,
       white: colors.white,
       stone: colors.stone,
+      gray: colors.gray,
 
       coffee: "#3c312b",
       yellow: "#f7b22c",

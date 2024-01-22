@@ -1,12 +1,12 @@
 export default function Banner() {
   return (
-    <section className="lg:h-[500px] flex flex-col lg:flex-row items-center space-x-5 text-white">
-      <div className="lg:w-5/12 h-full bg-stone-800 rounded-3xl flex flex-col space-y-5 lg:justify-between p-9">
-        <div className="lg:my-auto space-y-5">
+    <section className="md:h-[500px] flex flex-col md:flex-row items-center space-x-5 text-white">
+      <div className="md:w-5/12 h-full bg-stone-600 rounded-3xl flex flex-col space-y-5 md:justify-between p-9">
+        <div className="md:my-auto space-y-5">
           <h1 className="uppercase font-primary text-4xl md:text-5xl text-balance">
             The best coffee scene you have ever seen.
           </h1>
-          <p className="text-base md:text-sm text-white/60 text-balance">
+          <p className="text-base md:text-sm text-white/70 text-balance">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
@@ -34,7 +34,7 @@ export default function Banner() {
           </span>
         </div>
       </div>
-      <div className="lg:block hidden rounded-3xl overflow-hidden lg:w-7/12 h-full relative">
+      <div className="md:block hidden rounded-3xl overflow-hidden md:w-7/12 h-full relative">
         <img
           src="https://images.squarespace-cdn.com/content/v1/54fb5e8de4b07795ac9ff693/1580586844476-5VUJFCGJ4BKQWZ64RYE8/worker%2Bcoffee%2Bpackaging.jpg"
           className="object-cover h-full"

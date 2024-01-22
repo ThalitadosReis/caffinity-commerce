@@ -102,7 +102,7 @@ export default function Popular() {
                   </svg>
                 </button>
               </div>
-              <div className="flex justify-between items-start bg-gray-200 p-4 rounded-3xl">
+              <div className="flex justify-between items-start p-4 rounded-3xl">
                 <div>
                   <p className="text-sm">{product.productName}</p>
                   <span className="font-bold text-lg">{`$${product.price}`}</span>

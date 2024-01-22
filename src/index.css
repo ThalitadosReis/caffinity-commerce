@@ -20,10 +20,11 @@
   animation: rotate 7s linear infinite;
 }
 
+/* button */
 
 @layer base {
   body {
-    @apply font-secondary text-lg bg-stone-200;
+    @apply font-secondary text-lg bg-gray-800;
   }
 
   button,
@@ -41,6 +42,7 @@
   }
 
   .custom-button:hover {
-    @apply bg-stone-600 text-white;
+    @apply bg-stone-400 text-white;
   }
+
 }

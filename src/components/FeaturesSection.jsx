@@ -1,6 +1,6 @@
 export default function FeaturesSection() {
   return (
-    <section className="bg-stone-500 rounded-3xl p-9 text-white space-y-5 flex flex-col lg:flex-row justify-between">
+    <section className="bg-gray-600/70 rounded-3xl p-9 text-white space-y-5 flex flex-col lg:flex-row justify-between">
       <div className="lg:w-4/12 space-y-5">
         <h1 className="uppercase font-primary text-5xl text-balance">
           We care about the quality of our

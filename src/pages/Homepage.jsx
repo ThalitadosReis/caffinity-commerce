@@ -1,6 +1,7 @@
 import About from "../components/AboutSection";
 import Banner from "../components/Banner";
 import Features from "../components/FeaturesSection";
+import Footer from "../components/Footer";
 import NewArrivals from "../components/NewArrivalsSection";
 
 export default function Homepage() {
@@ -10,6 +11,7 @@ export default function Homepage() {
       <Features />
       <About />
       <NewArrivals />
+      <Footer />
     </div>
   );
 }
