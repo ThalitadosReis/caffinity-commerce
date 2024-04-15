@@ -20,8 +20,6 @@
   animation: rotate 7s linear infinite;
 }
 
-/* button */
-
 @layer base {
   body {
     @apply font-secondary text-lg bg-gray-800;

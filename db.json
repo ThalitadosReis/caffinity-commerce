@@ -8,21 +8,18 @@
   {
     "id": 2,
     "imgSrc": "/src/assets/img1.png",
-
     "productName": "Product 2",
     "price": 40
   },
   {
     "id": 3,
     "imgSrc": "/src/assets/img1.png",
-
     "productName": "Product 3",
     "price": 42
   },
   {
     "id": 4,
     "imgSrc": "/src/assets/img1.png",
-
     "productName": "Product 4",
     "price": 37
   }

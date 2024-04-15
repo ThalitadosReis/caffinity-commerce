@@ -2,21 +2,23 @@ import ProductCard from "../components/ProductCard";
 
 function AllProducts({ products, handleLikeClick, isProductLiked }) {
   return (
-    <div className="container mx-auto space-y-5 text-white text-base">
-      <h1 className="uppercase font-primary text-5xl text-balance">
-        All Products
-      </h1>
-      <div className="grid grid-cols-1 md:grid-cols-4 content-center text-sm gap-5">
-        {products.map((product) => (
-          <ProductCard
-            key={product.id}
-            product={product}
-            handleLikeClick={handleLikeClick}
-            isProductLiked={isProductLiked}
-          />
-        ))}
+    <section className="bg-white rounded-3xl p-9 space-y-9">
+      <div className="">
+        <h1 className="uppercase font-primary text-5xl text-balance pb-5">
+          All products
+        </h1>
+        <div className="grid grid-cols-1 md:grid-cols-4 content-center text-sm gap-5">
+          {products.map((product) => (
+            <ProductCard
+              key={product.id}
+              product={product}
+              handleLikeClick={handleLikeClick}
+              isProductLiked={isProductLiked}
+            />
+          ))}
+        </div>
       </div>
-    </div>
+    </section>
   );
 }
 

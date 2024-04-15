@@ -3,7 +3,7 @@ import logo from "../assets/logo.png";
 export default function Footer() {
   return (
     <section>
-      <div className="bg-gray-600/70 rounded-3xl text-white p-9 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4">
+      <div className="bg-gray-600/70 rounded-3xl text-white p-9 grid grid-cols-1 md:grid-cols-4">
         <div className="flex items-center md:mx-auto">
           <img src={logo} className="w-auto h-28" alt="Logo" />
         </div>

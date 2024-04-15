@@ -59,7 +59,7 @@ export default function Popular() {
         <div className="justify-start md:justify-self-end">
           <Link
             to="/all-products"
-            className="flex gap-2 custom-button text-bold"
+            className="flex gap-2 custom-button"
           >
             All Products
             <svg
