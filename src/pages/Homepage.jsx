@@ -2,7 +2,7 @@ import About from "../components/AboutSection";
 import Banner from "../components/Banner";
 import Features from "../components/FeaturesSection";
 import Footer from "../components/Footer";
-import NewArrivals from "../components/NewArrivalsSection";
+import NewArrivals from "../components/Popular";
 
 export default function Homepage() {
   return (

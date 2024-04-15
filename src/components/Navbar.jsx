@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import logo from "../assets/logo.png";
 
 export default function Navbar() {
@@ -17,13 +18,13 @@ export default function Navbar() {
             <a className="text-sm hover:text-white/70">About</a>
           </li>
           <li>
-            <a className="text-sm hover:text-white/70">Collections</a>
+            <Link to="/all-products" className="text-sm hover:text-white/70">All Products</Link>
           </li>
         </ul>
 
-        <a>
+        <Link to="/">
           <img className="object-cover w-20" src={logo} alt="logo" />
-        </a>
+        </Link>
 
         <ul className="hidden md:flex items-center gap-x-3">
           {/* search engine */}
