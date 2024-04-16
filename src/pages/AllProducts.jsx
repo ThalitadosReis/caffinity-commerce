@@ -3,7 +3,6 @@ import ProductCard from "../components/ProductCard";
 function AllProducts({ products, handleLikeClick, isProductLiked }) {
   return (
     <section className="bg-white rounded-3xl p-9 space-y-9">
-      <div className="">
         <h1 className="uppercase font-primary text-5xl text-balance pb-5">
           All products
         </h1>
@@ -17,7 +16,6 @@ function AllProducts({ products, handleLikeClick, isProductLiked }) {
             />
           ))}
         </div>
-      </div>
     </section>
   );
 }
