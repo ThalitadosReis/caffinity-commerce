@@ -2,25 +2,55 @@
   {
     "id": 1,
     "imgSrc": "/src/assets/img1.png",
-    "productName": "Product 1",
+    "productName": "Starbucks Coffee",
     "price": 35
   },
   {
     "id": 2,
     "imgSrc": "/src/assets/img1.png",
-    "productName": "Product 2",
+    "productName": "Costa Coffee",
     "price": 40
   },
   {
     "id": 3,
     "imgSrc": "/src/assets/img1.png",
-    "productName": "Product 3",
+    "productName": "Dunkin' Donuts Coffee",
     "price": 42
   },
   {
     "id": 4,
     "imgSrc": "/src/assets/img1.png",
-    "productName": "Product 4",
+    "productName": "Lavazza Coffee",
+    "price": 37
+  },
+  {
+    "id": 5,
+    "imgSrc": "/src/assets/img1.png",
+    "productName": "Peet's Coffee",
+    "price": 42
+  },
+  {
+    "id": 6,
+    "imgSrc": "/src/assets/img1.png",
+    "productName": "Blue Bottle Coffee",
+    "price": 37
+  },
+  {
+    "id": 7,
+    "imgSrc": "/src/assets/img1.png",
+    "productName": "Illy Coffee",
+    "price": 42
+  },
+  {
+    "id": 8,
+    "imgSrc": "/src/assets/img1.png",
+    "productName": "Death Wish Coffee",
+    "price": 42
+  },
+  {
+    "id": 9,
+    "imgSrc": "/src/assets/img1.png",
+    "productName": "Kicking Horse Coffee",
     "price": 37
   }
 ]
