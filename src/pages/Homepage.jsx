@@ -1,7 +1,7 @@
-import About from "../components/AboutSection";
 import Banner from "../components/Banner";
 import Features from "../components/FeaturesSection";
-import NewArrivals from "../components/Popular";
+import About from "../components/AboutSection";
+import Popular from "../components/PopularSection";
 
 export default function Homepage() {
   return (
@@ -9,7 +9,7 @@ export default function Homepage() {
       <Banner />
       <Features />
       <About />
-      <NewArrivals />
+      <Popular />
     </div>
   );
 }

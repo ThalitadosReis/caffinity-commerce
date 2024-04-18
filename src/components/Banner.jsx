@@ -1,22 +1,22 @@
 export default function Banner() {
   return (
-    <section className="md:h-[500px] flex flex-col md:flex-row items-center space-x-5 text-white">
-      <div className="md:w-5/12 h-full bg-stone-600 rounded-3xl flex flex-col space-y-5 md:justify-between p-9">
-        <div className="md:my-auto space-y-5">
-          <h1 className="uppercase font-primary text-4xl md:text-5xl text-balance">
+    <section className="md:h-[500px] flex flex-col md:flex-row items-center space-x-5">
+      <div className="md:w-5/12 h-full flex flex-col space-y-5 md:justify-between text-white bg-stone-600 rounded-3xl p-9">
+        <div className="md:my-auto space-y-5 text-balance">
+          <h1 className="uppercase font-primary text-4xl md:text-5xl">
             The best coffee scene you have ever seen.
           </h1>
-          <p className="text-base md:text-sm text-white/70 text-balance">
+          <p className="text-base md:text-sm text-white/70">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
             aliquip ex ea commodo consequat.
           </p>
-          <button className="custom-button max-w-max text-bold">
+          <button className="custom-button">
             Explore More
           </button>
         </div>
-        <div className="flex gap-2 text-sm">
+        <div className="flex items-center gap-2 text-sm">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
@@ -29,18 +29,17 @@ export default function Banner() {
               clipRule="evenodd"
             />
           </svg>
-          <span className="text-white/60">
+          <span className="text-white/70">
             Kaisten, <strong>Switzerland</strong>
           </span>
         </div>
       </div>
-      <div className="md:block hidden rounded-3xl overflow-hidden md:w-7/12 h-full relative">
+      <div className="md:w-7/12 h-full relative md:block hidden rounded-3xl overflow-hidden">
         <img
           src="https://images.squarespace-cdn.com/content/v1/54fb5e8de4b07795ac9ff693/1580586844476-5VUJFCGJ4BKQWZ64RYE8/worker%2Bcoffee%2Bpackaging.jpg"
           className="object-cover h-full"
-          alt="Coffee Mockup"
+          alt="Coffee Image Mockup"
         />
-
         <div className="absolute top-5 right-5 flex items-center justify-center">
           <svg viewBox="0 0 100 100" width="70" className="rotate-animation">
             <defs>
@@ -63,7 +62,7 @@ export default function Banner() {
               </textPath>
             </text>
           </svg>
-
+          
           <button className="absolute bg-white p-2 rounded-full">
             <svg
               xmlns="http://www.w3.org/2000/svg"

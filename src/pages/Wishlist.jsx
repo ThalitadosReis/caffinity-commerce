@@ -20,7 +20,7 @@ export default function Wishlist() {
             </p>
           </div>
           <div className="justify-self-start mt-5 lg:justify-self-end lg:mt-0">
-            <Link to="/all-products" className="gap-2 custom-button">
+            <Link to="/liked-products" className="custom-button">
               (0) Items
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -47,7 +47,7 @@ export default function Wishlist() {
             </p>
           </div>
           <div className="justify-self-start mt-5 lg:justify-self-end lg:mt-0">
-            <Link to="/all-products" className="gap-2 custom-button">
+            <Link to="/all-products" className="custom-button">
               (0) Items
               <svg
                 xmlns="http://www.w3.org/2000/svg"

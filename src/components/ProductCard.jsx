@@ -1,10 +1,14 @@
-export default function ProductCard({ product, handleLikeClick, isProductLiked }) {
+export default function ProductCard({
+  product,
+  handleLikeClick,
+  isProductLiked,
+}) {
   return (
     <div key={product.id} className="flex flex-col">
-      <div className="relative flex flex-col space-y-2">
-        <div className="bg-stone-200 p-4 rounded-3xl relative">
+      <div className="flex flex-col relative">
+        <div className="bg-stone-200 rounded-3xl">
           <img
-            className="w-full h-full object-cover rounded-2xl"
+            className="w-full h-full object-cover"
             src={product.imgSrc}
             alt={product.productName}
           />
@@ -14,10 +18,10 @@ export default function ProductCard({ product, handleLikeClick, isProductLiked }
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              fill={isProductLiked(product.id) ? "red" : "none"}
+              fill={isProductLiked(product.id) ? "#FF6262" : "none"}
               viewBox="0 0 24 24"
-              strokeWidth={1.5}
-              stroke={isProductLiked(product.id) ? "red" : "currentColor"}
+              strokeWidth={1.2}
+              stroke={isProductLiked(product.id) ? "#FF6262" : "currentColor"}
               className="w-6 h-6"
             >
               <path
@@ -28,10 +32,10 @@ export default function ProductCard({ product, handleLikeClick, isProductLiked }
             </svg>
           </button>
         </div>
-        <div className="flex justify-between items-start p-4 rounded-3xl">
+        <div className="flex justify-between items-start p-5">
           <div>
             <p className="text-sm">{product.productName}</p>
-            <span className="font-bold text-lg">{`$${product.price}`}</span>
+            <span className="font-bold text-base">{`$${product.price}`}</span>
           </div>
           <button className="bg-yellow rounded-xl p-2">
             <svg

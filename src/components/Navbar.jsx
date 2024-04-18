@@ -105,7 +105,7 @@ export default function Navbar() {
 
           {/* shopping bag */}
           <li>
-            <a className="hover:text-white/70 relative">
+            <Link to="/cart" className="hover:text-white/70 relative">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -123,7 +123,7 @@ export default function Navbar() {
               <div className="absolute -bottom-2 -right-1 h-4 w-4 bg-yellow rounded-full flex items-center justify-center text-xs text-black">
                 1
               </div>
-            </a>
+            </Link>
           </li>
 
           {/* burger menu */}

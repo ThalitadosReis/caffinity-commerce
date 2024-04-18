@@ -47,19 +47,19 @@ export default function Popular() {
   ];
 
   return (
-    <section className="bg-white rounded-3xl p-9 space-y-9">
-      <div className="grid grid-cols-1 md:grid-cols-3 items-center gap-3">
+    <section className="bg-white rounded-3xl p-9 space-y-5">
+      <div className="grid grid-cols-1 md:grid-cols-3 items-center gap-3 text-sm">
         <h1 className="uppercase font-primary text-5xl text-balance">
-          New Arrivals
+          Last Arrivals
         </h1>
-        <p className="text-sm text-black">
+        <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua.
         </p>
         <div className="justify-start md:justify-self-end">
           <Link
             to="/all-products"
-            className="gap-2 custom-button"
+            className="custom-button"
           >
             All Products
             <svg
@@ -77,7 +77,7 @@ export default function Popular() {
           </Link>
         </div>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-4 content-center text-sm gap-5">
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-5">
         {products.map((product) => (
           <ProductCard
             key={product.id}
