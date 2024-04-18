@@ -6,14 +6,19 @@ export default function Cart({
   handleQuantityChange,
   handleRemoveFromCart,
   handleLikeClick,
-  isProductLiked
+  isProductLiked,
 }) {
+  const deliveryFee = totalPrice < 50 ? 5 : 0;
+  const totalWithDelivery = totalPrice + deliveryFee;
+
   return (
     <section className="space-y-9">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-        <div className="bg-white rounded-3xl p-9 space-y-5">
+      <div className="grid grid-cols-1 md:grid-cols-3 items-baseline gap-5">
+        <div className="bg-white rounded-3xl p-9 space-y-5 col-span-2">
           <h1 className="uppercase font-primary text-5xl text-balance">
-            Your bag ({cartItems.reduce((total, item) => total + item.quantity, 0)} {cartItems.length === 1 ? "item" : "items"})
+            Your bag (
+            {cartItems.reduce((total, item) => total + item.quantity, 0)}
+            {cartItems.length === 1 ? " item" : " items"})
           </h1>
           <div className="text-sm space-y-5">
             {cartItems.map((product) => (
@@ -28,11 +33,28 @@ export default function Cart({
             ))}
           </div>
         </div>
-        <div className="grid grid-cols-1 lg:grid-cols-2 bg-stone-600 rounded-3xl p-9 text-white">
+        <div className="grid bg-yellow rounded-3xl text-base p-9 gap-5">
           <h1 className="uppercase font-primary text-5xl text-balance">
             Total
           </h1>
-          <p className="text-3xl mt-4">${totalPrice}</p>
+          <div className="flex justify-between">
+            <p className="">Subtotal</p>
+            <p>${totalPrice}</p>
+          </div>
+          <div className="flex justify-between">
+            <p>Delivery</p>
+            <p>${deliveryFee}</p>
+          </div>
+          <hr className="border-black" />
+          <div className="flex justify-between font-semibold">
+            <p className="">Total (VAT included)</p>
+            <p>${totalWithDelivery}</p>
+          </div>
+          <p className="text-xs">
+            {deliveryFee > 0
+              ? "If your bag is over $50 you will qualify for free shipping. For Plus members, it's always free."
+              : "You have free delivery!"}
+          </p>
         </div>
       </div>
     </section>

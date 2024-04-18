@@ -1,71 +1,22 @@
-import { useState } from "react";
 import { Routes, Route } from "react-router-dom";
 import productsData from "../db.json";
 
-import Navbar from "./components/Navbar";
-import Homepage from "./pages/Homepage";
-import Footer from "./components/Footer";
-import AllProducts from "./pages/AllProducts";
-import Wishlist from "./pages/Wishlist";
-import LikedProducts from "./pages/LikedProducts";
-import Cart from "./pages/Cart";
+import Navbar from "./components/Navbar.jsx";
+import Homepage from "./pages/Homepage.jsx";
+import Footer from "./components/Footer.jsx";
+import AllProducts from "./pages/AllProducts.jsx";
+import Wishlist from "./pages/Wishlist.jsx";
+import LikedProducts from "./pages/LikedProducts.jsx";
+import Cart from "./pages/Cart.jsx";
+
+import { useLikedProducts, useCartItems } from "./services/Handlers.jsx";
 
 const products = productsData;
 
 export default function App() {
-  const [likedProducts, setLikedProducts] = useState([]);
-  const [cartItems, setCartItems] = useState([]);
-  const [totalPrice, setTotalPrice] = useState(0);
+  const { likedProducts, handleLikeClick, isProductLiked, setLikedProducts } = useLikedProducts();
 
-  // Handle Liked Products
-  const handleLikeClick = (productId) => {
-    setLikedProducts((prevLikedProducts) => {
-      if (prevLikedProducts.includes(productId)) {
-        return prevLikedProducts.filter((id) => id !== productId);
-      } else {
-        return [...prevLikedProducts, productId];
-      }
-    });
-  };
-
-  const isProductLiked = (productId) => likedProducts.includes(productId);
-
-  // Handle Items in Cart
-  const handleAddToCart = (product) => {
-    const existingItem = cartItems.find((item) => item.id === product.id);
-
-    if (existingItem) {
-      setCartItems(
-        cartItems.map((item) =>
-          item.id === product.id
-            ? { ...item, quantity: item.quantity + 1 }
-            : item
-        )
-      );
-      setTotalPrice(totalPrice + product.price);
-    } else {
-      setCartItems([...cartItems, { ...product, quantity: 1 }]);
-      setTotalPrice(totalPrice + product.price);
-    }
-  };
-
-  const handleQuantityChange = (productId, newQuantity) => {
-    const updatedCartItems = cartItems.map((item) =>
-      item.id === productId ? { ...item, quantity: newQuantity } : item
-    );
-    setCartItems(updatedCartItems);
-
-    const newTotalPrice = updatedCartItems.reduce(
-      (total, item) => total + item.price * item.quantity,
-      0
-    );
-    setTotalPrice(newTotalPrice);
-  };
-
-  const handleRemoveFromCart = (productId) => {
-    const updatedCartItems = cartItems.filter((item) => item.id !== productId);
-    setCartItems(updatedCartItems);
-  };
+  const { cartItems, totalPrice, handleAddToCart, handleQuantityChange, handleRemoveFromCart } = useCartItems();
 
   return (
     <div className="container mx-auto space-y-5">
@@ -134,6 +85,7 @@ export default function App() {
           }
         />
       </Routes>
+
       <Footer />
     </div>
   );

@@ -7,20 +7,20 @@ export default function CartList({
 }) {
   return (
     <div key={product.id} className="space-y-5">
-      <div className="flex items-center justify-between">
-        <div className="flex items-center text-balance w-full">
+      <div className="flex items-center lg:justify-between flex-col lg:flex-row">
+        <div className="flex text-sm justify-evenly">
           <img
             src={product.imgSrc}
             alt={product.productName}
             className="w-3/12 object-cover"
           />
-          <div className=" text-sm text-nowrap space-y-3">
+          <div className="text-balance space-y-3">
             <div>
               <p className="font-semibold">{product.productName}</p>
               <p>${product.price}</p>
             </div>
             <hr />
-            <div className="flex items-center gap-2">
+            <div className="flex flex-col items-start">
               <button
                 className="flex items-center justify-center gap-1"
                 onClick={() => handleRemoveFromCart(product.id)}
@@ -29,7 +29,7 @@ export default function CartList({
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
-                  strokeWidth="1.5"
+                  strokeWidth={1.2}
                   stroke="currentColor"
                   className="w-5 h-5"
                 >
@@ -41,7 +41,6 @@ export default function CartList({
                 </svg>
                 Remove
               </button>
-              |
               <button
                 className="flex items-center justify-center gap-1"
                 onClick={() => handleLikeClick(product.id)}
@@ -51,7 +50,7 @@ export default function CartList({
                     xmlns="http://www.w3.org/2000/svg"
                     fill={isProductLiked(product.id) ? "#FF6262" : "none"}
                     viewBox="0 0 24 24"
-                    strokeWidth="1.5"
+                    strokeWidth={1.2}
                     stroke={isProductLiked(product.id) ? "#FF6262" : "none"}
                     className="w-5 h-5"
                   >
