@@ -27,7 +27,7 @@ export default function Wishlist({ likedProducts }) {
                 <span className="text-sm text-[#FF6262]">No items liked</span>
               ) : (
                 <Link to="/liked-products" className="custom-button">
-                  {likedItemsCount} Items
+                  {likedItemsCount} Item(s)
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 24 24"

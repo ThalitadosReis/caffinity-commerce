@@ -1,7 +1,7 @@
 export default function Banner() {
   return (
     <section className="md:h-[500px] flex flex-col md:flex-row items-center space-x-5">
-      <div className="md:w-5/12 h-full flex flex-col md:justify-between text-white bg-stone-600 rounded-3xl p-9">
+      <div className="md:w-5/12 h-full flex flex-col md:justify-between text-white bg-stone-600 rounded-3xl p-9 gap-5">
         <div className="md:my-auto text-balance space-y-5">
           <h1 className="uppercase font-primary text-4xl md:text-5xl">
             The best coffee scene you have ever seen.

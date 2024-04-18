@@ -2,6 +2,7 @@ export default function ProductCard({
   product,
   handleLikeClick,
   isProductLiked,
+  handleAddToCart,
 }) {
   return (
     <div key={product.id} className="flex flex-col">
@@ -37,7 +38,10 @@ export default function ProductCard({
             <p className="text-sm">{product.productName}</p>
             <span className="font-bold text-base">{`$${product.price}`}</span>
           </div>
-          <button className="bg-yellow rounded-xl p-2">
+          <button
+            className="bg-yellow rounded-xl p-2 flex"
+            onClick={() => handleAddToCart(product)} 
+          > Add
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -51,7 +55,7 @@ export default function ProductCard({
                 strokeLinejoin="round"
                 d="M12 4.5v15m7.5-7.5h-15"
               />
-            </svg>
+            </svg> 
           </button>
         </div>
       </div>

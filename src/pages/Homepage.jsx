@@ -3,7 +3,7 @@ import Features from "../components/FeaturesSection";
 import About from "../components/AboutSection";
 import Popular from "../components/Popular";
 
-export default function Homepage({ products, handleLikeClick, isProductLiked }) {
+export default function Homepage({ products, handleLikeClick, isProductLiked, handleAddToCart }) {
   return (
     <div aria-label="Website Homepage" className="space-y-5">
       <Banner />
@@ -13,6 +13,7 @@ export default function Homepage({ products, handleLikeClick, isProductLiked }) 
         products={products}
         handleLikeClick={handleLikeClick}
         isProductLiked={isProductLiked}
+        handleAddToCart={handleAddToCart}
       />
     </div>
   );

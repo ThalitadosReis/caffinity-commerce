@@ -1,7 +1,12 @@
 import { Link } from "react-router-dom";
 import ProductCard from "./ProductCard";
 
-function Popular({ products, handleLikeClick, isProductLiked }) {
+function Popular({
+  products,
+  handleLikeClick,
+  isProductLiked,
+  handleAddToCart,
+}) {
   return (
     <section className="bg-white rounded-3xl p-9 space-y-5">
       <div className="grid grid-cols-1 md:grid-cols-3 items-center gap-3 text-sm">
@@ -13,10 +18,7 @@ function Popular({ products, handleLikeClick, isProductLiked }) {
           eiusmod tempor incididunt ut labore et dolore magna aliqua.
         </p>
         <div className="justify-start md:justify-self-end">
-          <Link
-            to="/all-products"
-            className="gap-2 custom-button"
-          >
+          <Link to="/all-products" className="gap-2 custom-button">
             All Products
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -34,18 +36,15 @@ function Popular({ products, handleLikeClick, isProductLiked }) {
         </div>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-4 gap-5">
-      {products.length > 0 ? (
-          products.map((product) => (
-            <ProductCard
-              key={product.id}
-              product={product}
-              handleLikeClick={handleLikeClick}
-              isProductLiked={isProductLiked}
-            />
-          ))
-        ) : (
-          <p>No products available.</p>
-        )}
+        {products.slice(0, 4).map((product) => (
+          <ProductCard
+            key={product.id}
+            product={product}
+            handleLikeClick={handleLikeClick}
+            isProductLiked={isProductLiked}
+            handleAddToCart={handleAddToCart}
+          />
+        ))}
       </div>
     </section>
   );
