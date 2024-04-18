@@ -2,7 +2,7 @@ import ProductCard from "../components/ProductCard";
 
 function AllProducts({ products, handleLikeClick, isProductLiked }) {
   return (
-    <section className="bg-white rounded-3xl p-9 space-y-9">
+    <section className="bg-white rounded-3xl p-9 space-y-5">
         <h1 className="uppercase font-primary text-5xl text-balance">
           All products
         </h1>
