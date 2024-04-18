@@ -1,4 +1,15 @@
-export default function LikedProducts() {
+import ProductCard from "../components/ProductCard";
+
+export default function LikedProducts({
+  likedProducts,
+  products,
+  handleLikeClick,
+  isProductLiked,
+}) {
+  const likedItems = products.filter((product) =>
+    likedProducts.includes(product.id)
+  );
+
   const goBack = () => {
     window.history.back();
   };
@@ -28,6 +39,16 @@ export default function LikedProducts() {
           </svg>
           Back
         </button>
+      </div>
+      <div className="grid grid-cols-1 md:grid-cols-4 content-center text-sm gap-5">
+        {likedItems.map((product) => (
+          <ProductCard
+            key={product.id}
+            product={product}
+            handleLikeClick={handleLikeClick}
+            isProductLiked={isProductLiked}
+          />
+        ))}
       </div>
     </section>
   );

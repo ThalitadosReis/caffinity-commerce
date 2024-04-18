@@ -64,7 +64,18 @@ export default function App() {
             />
           }
         />
-        <Route exact path="/liked-products" element={<LikedProducts />} />
+        <Route
+          exact
+          path="/liked-products"
+          element={
+            <LikedProducts
+              likedProducts={likedProducts}
+              products={products}
+              handleLikeClick={handleLikeClick}
+              isProductLiked={isProductLiked}
+            />
+          }
+        />
         <Route exact path="/cart" element={<Cart />} />
       </Routes>
       <Footer />
