@@ -170,7 +170,7 @@ export default function Navbar({ likedProducts, cartItems }) {
                 />
               </svg>
               {cartCount > 0 && (
-                <div className="absolute -top-1 -right-2 flex items-center justify-center h-4 w-fit p-1 bg-yellow rounded-full text-xs text-black">
+                <div className="absolute -top-1 -right-2 flex items-center justify-center h-4 w-4 p-1 bg-yellow rounded-full text-xs text-black">
                   {cartCount}
                 </div>
               )}

@@ -18,7 +18,7 @@ function Popular({
           eiusmod tempor incididunt ut labore et dolore magna aliqua.
         </p>
         <div className="justify-start md:justify-self-end">
-          <Link to="/all-products" className="gap-2 custom-button">
+          <Link to="/all-products" className="custom-button">
             All Products
             <svg
               xmlns="http://www.w3.org/2000/svg"
