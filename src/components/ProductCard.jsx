@@ -1,9 +1,21 @@
+import { useState } from "react";
+import ProductModal from "./ProductModal";
+
 export default function ProductCard({
   product,
   handleLikeClick,
   isProductLiked,
   handleAddToCart,
 }) {
+  const [showModal, setShowModal] = useState(false);
+
+  const openModal = () => {
+    setShowModal(true);
+  };
+
+  const closeModal = () => {
+    setShowModal(false);
+  };
   return (
     <div key={product.id} className="flex flex-col relative">
       <div className="bg-stone-200 rounded-3xl">
@@ -13,7 +25,7 @@ export default function ProductCard({
           alt={product.productName}
         />
         <button
-          className="absolute top-2 right-2 p-2"
+          className="absolute top-2 right-3 p-2"
           onClick={() => handleLikeClick(product.id)}
         >
           <svg
@@ -22,7 +34,7 @@ export default function ProductCard({
             viewBox="0 0 24 24"
             strokeWidth={1.2}
             stroke={isProductLiked(product.id) ? "#FF6262" : "currentColor"}
-            className="w-6 h-6"
+            className="w-7 h-7 hover:fill-[#FF6262] hover:stroke-[#FF6262]"
           >
             <path
               strokeLinecap="round"
@@ -32,30 +44,27 @@ export default function ProductCard({
           </svg>
         </button>
       </div>
-      <div className="flex justify-between items-start mt-5">
-        <div>
-          <p className="text-xs">{product.productName}</p>
-          <span className="font-bold text-sm">{`$${product.price}`}</span>
+      <div className="my-5 space-y-2">
+        <div className="flex flex-col md:flex-row justify-between">
+          <h2 className="font-primary text-xl">{product.productName}</h2>
+          <p className="flex items-start gap-1 font-primary text-2xl">
+            <span className="font-secondary text-xs">From</span>
+            {`$${product.price}`}
+          </p>
         </div>
         <button
-          className="bg-yellow rounded-xl p-2 flex"
-          onClick={() => handleAddToCart(product)}
+          className="bg-stone-200 rounded-full py-2 px-5 shadow hover:shadow-lg ease-linear transition-all duration-150"
+          onClick={openModal}
         >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            strokeWidth={1.2}
-            stroke="currentColor"
-            className="w-5 h-5"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M12 4.5v15m7.5-7.5h-15"
-            />
-          </svg>
+          Quick Add
         </button>
+        {showModal && (
+          <ProductModal
+            product={product}
+            handleAddToCart={handleAddToCart}
+            closeModal={closeModal}
+          />
+        )}
       </div>
     </div>
   );

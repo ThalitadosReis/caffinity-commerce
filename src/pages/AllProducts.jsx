@@ -6,7 +6,7 @@ function AllProducts({ products, handleLikeClick, isProductLiked, handleAddToCar
         <h1 className="uppercase font-primary text-5xl text-balance">
           All products
         </h1>
-        <div className="grid grid-cols-1 md:grid-cols-4 content-center text-sm gap-5">
+        <div className="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-5 content-center text-sm gap-5">
           {products.map((product) => (
             <ProductCard
               key={product.id}

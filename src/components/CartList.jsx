@@ -11,7 +11,7 @@ export default function CartList({
         <img
           src={product.imgSrc}
           alt={product.productName}
-          className="h-24 w-min object-cover md:col-span-1 mx-auto"
+          className="h-36 object-cover md:col-span-1 mx-auto"
         />
         <div className="md:col-span-2 space-y-3">
           <div className="flex justify-between">
